@@ -1,0 +1,157 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #243047;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    color: #2457a7;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #65728a;
+}
+
+.card, .task-card, .empty-state {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 7px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd5e2;
+    border-radius: 7px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+button, .button {
+    display: inline-block;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    background: #2457a7;
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card button {
+    margin-top: 18px;
+}
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.task-info {
+    overflow-wrap: anywhere;
+}
+
+.task-info h3 {
+    margin-top: 0;
+}
+
+.task-meta, .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.task-meta span {
+    font-size: 13px;
+    color: #536176;
+}
+
+.priority {
+    font-weight: bold;
+}
+
+.priority.high {
+    color: #c0392b;
+}
+
+.priority.medium {
+    color: #b9770e;
+}
+
+.priority.low {
+    color: #218c55;
+}
+
+.completed h3 {
+    text-decoration: line-through;
+    color: #778397;
+}
+
+.secondary {
+    background: #64748b;
+}
+
+.edit {
+    background: #16866b;
+}
+
+.danger {
+    background: #c0392b;
+}
+
+.empty-state {
+    text-align: center;
+    color: #65728a;
+}
+
+@media (max-width: 650px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .task-card {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
